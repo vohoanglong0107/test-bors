@@ -1,0 +1,13 @@
+name: Sleep 40 seconds
+run-name: ${{ github.actor }} is sleeping for 40 seconds
+on:
+  push:
+    branches:
+      - automation/bors/try
+      - automation/bors/try-merge
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sleep 40
